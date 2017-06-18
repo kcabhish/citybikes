@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './Station.css';
+//import './Station.css';
 
 import StationInfo from './StationInfo.js';
 
@@ -9,7 +9,7 @@ function StationInfoContainer(props){
     return (
         <div className="station flex-col">
            <div className="station-header">
-              {props.stationInfo.name}
+              <span>{props.stationInfo.name}</span>
            </div>
            <div className="station-container flex-row">
                 <StationInfo number = {props.stationInfo.free_bikes}
