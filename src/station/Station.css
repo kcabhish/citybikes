@@ -1,3 +1,4 @@
+
 .network-name{
     font-size:calc(16px + 4vw);
     color:green;
@@ -21,9 +22,9 @@
     width:100%;
     height:50vh;
     min-height:250px;
-/*    border:2px solid black;*/
     border-bottom-right-radius: 25px;
     margin-bottom:20px;
+    box-shadow: 10px 10px 5px #888888;
 }
 
 .station-header{
@@ -41,7 +42,6 @@
 .station-container{
     width:100%;
     height:80%;
-/*    border:2px solid black;*/
     justify-content: space-around;
     background-color:#DEE5E4;
     
@@ -50,12 +50,15 @@
 .station-footer{
     width:100%;
     height:5%;
+    padding-bottom:2px;
     display:flex;
     justify-content: center;
     background-color:#DEE5E4;
     border-bottom-right-radius: 25px;
 }
-
+.station-footer span{
+    
+}
 
 .station-info{
     display:flex;
@@ -97,6 +100,18 @@
 @media only screen and (max-width: 350px) {
     .station-info{
         width:100vw;
+    }
+    .network-header{
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+    }
+    .network-name{
+        font-size:40px;
+    }
+    .network-address{
+       font-size:12px;
     }
     .flex-row{
         flex-direction:column;

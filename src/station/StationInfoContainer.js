@@ -17,7 +17,7 @@ function StationInfoContainer(props){
                              description = "empty slots"/>
            </div>
            <div className="station-footer">
-              {props.stationInfo.timestamp}
+              <span>{props.stationInfo.timestamp}</span>
            </div>
         </div>);
 }
