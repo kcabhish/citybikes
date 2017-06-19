@@ -1,11 +1,13 @@
 import React,{ Component } from 'react';
 import ReactDOM from 'react-dom';
 import './Station.css';
-import logo from '../logo.svg';
 import StationInfoContainer from './StationInfoContainer.js';
 
 var url = "http://api.citybik.es/v2/networks/hubway?fields=id,name.stations,location";
 
+/**
+Main Network component that loads the station information page.
+*/
 class Network extends Component{
     constructor(props) {
       
@@ -35,6 +37,10 @@ class Network extends Component{
         console.log(this.state.stations);
         return (
           <div className="network flex-col">
+            <div className="network-header">
+                <span className="network-name">{this.state.name}</span>
+                <span className="network-address">{this.state.city}, {this.state.country}</span>
+            </div>
               {
                   this.state.stations.length ?
                   this.state.stations.map(item=><StationInfoContainer 
