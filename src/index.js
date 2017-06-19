@@ -4,11 +4,11 @@ import registerServiceWorker from './registerServiceWorker';
 
 //custom imports
 //import StationInfoContainer from './station/StationInfoContainer.js';
-import Station from './station/Station.js';
+import Network from './station/Network.js';
 import './index.css';
 import './station/Station.css';
 
-const element = <Station network={getNetwork()}/>;
+const element = <Network />;
 ReactDOM.render(
   element,
   document.getElementById('root')
