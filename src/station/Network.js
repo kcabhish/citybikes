@@ -2,8 +2,8 @@ import React,{ Component } from 'react';
 import ReactDOM from 'react-dom';
 import './Station.css';
 import StationInfoContainer from './StationInfoContainer.js';
-
-var url = "http://api.citybik.es/v2/networks/hubway?fields=id,name.stations,location";
+import NetworkService from '../services/NetworkService.js';
+var url = "https://api.citybik.es/v2/networks/hubway?fields=id,name.stations,location";
 
 /**
 Main Network component that loads the station information page.
@@ -19,9 +19,10 @@ class Network extends Component{
           country:"",
           stations:[]
       };
-      fetch(url)
-      .then(result=>result.json())
+      var network = new NetworkService();
+      network.fetchData("hubway")
       .then(function(data){
+          console.log(data);
           _this.setState({
               name:data.network.name,
               city:data.network.location.city,

@@ -1,4 +1,6 @@
-
+#root{
+    margin:0 10vw 0 10vw;
+}
 .network-name{
     font-size:calc(16px + 4vw);
     color:green;
