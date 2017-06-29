@@ -23,7 +23,6 @@ class Network extends Component{
       //params can be hubway, opole-bike
       network.fetchData("opole-bike")
       .then(function(data){
-          console.log(data);
           _this.setState({
               name:data.network.name,
               city:data.network.location.city,
@@ -36,7 +35,6 @@ class Network extends Component{
         
     
     render(){
-        console.log(this.state.stations);
         return (
           <div className="network flex-col">
             <div className="network-header">

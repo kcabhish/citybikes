@@ -20,5 +20,8 @@ function NetworkService(){
         return fetch(url)
         .then(result=>result.json())
     }
+    this.fetchNetworkList=()=>{
+        return fetch("https://api.citybik.es/v2/networks").then(result=>result.json());
+    }
 }
 export default NetworkService;
