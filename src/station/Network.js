@@ -20,7 +20,8 @@ class Network extends Component{
           stations:[]
       };
       var network = new NetworkService();
-      network.fetchData("hubway")
+      //params can be hubway, opole-bike
+      network.fetchData("opole-bike")
       .then(function(data){
           console.log(data);
           _this.setState({
