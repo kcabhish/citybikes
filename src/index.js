@@ -6,9 +6,9 @@ import registerServiceWorker from './registerServiceWorker';
 import Network from './station/Network.js';
 import './index.css';
 import './station/Station.css';
-import NetworkList from './station/NetworkList.js';
+//import NetworkList from './station/NetworkList.js';
 
-const element = <NetworkList />;
+const element = <Network />;
 ReactDOM.render(
   element,
   document.getElementById('root')

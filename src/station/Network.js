@@ -21,7 +21,7 @@ class Network extends Component{
       };
       var network = new NetworkService();
       //params can be hubway, opole-bike
-      network.fetchData("opole-bike")
+      network.fetchData("hubway")
       .then(function(data){
           _this.setState({
               name:data.network.name,
